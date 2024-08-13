@@ -50,7 +50,7 @@ namespace SpendSmart.Controllers
         }
 
         // delete expense controller
-        public IActionResult Delete(int id)
+        public IActionResult DeleteExpense(int id)
         {
             // get expense
             var expenseInDb = _context.Expenses.SingleOrDefault(e => e.Id == id);
