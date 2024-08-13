@@ -29,6 +29,10 @@ namespace SpendSmart.Controllers
             // get all expense as list 
             var allExpenses = _context.Expenses.ToList();
 
+            var totalExpenses = allExpenses.Sum(e => e.Value);
+
+            ViewBag.Expenses = totalExpenses;
+
             // return all expense
             return View(allExpenses);
         }
